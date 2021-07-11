@@ -1,3 +1,4 @@
+import * as dotenv from "dotenv";
 import * as cron from "node-cron";
 import * as fs from "fs";
 import { Telegraf } from "telegraf";
@@ -5,9 +6,10 @@ import { Timetable, JobInfo } from "./entity/timetable";
 import { RandomHelper } from "./utils/randomHelper";
 import { HistoryRepository } from "./respository/history";
 
-const token: string = "1714380462:AAEqH-fVp-3GTIMfQdDq8SMX4ANLuLLmbm8";
-const client = new Telegraf(token)
-const chatId: string = "-517845866";
+dotenv.config();
+
+const client = new Telegraf(process.env.TELEGRAM_BOT_TOKEN)
+const chatId: string = process.env.TELEGRAM_CHAT_ID;
 const historyRepository = new HistoryRepository();
 
 let todayJobs: Array<JobInfo> = [];
@@ -38,8 +40,8 @@ async function main() {
     todayJobs = getRandomJobs();
 
     // Notify if job havent done
-    cron.schedule('* * 9,12,15,18 * * *', () => {
-        // cron.schedule('*/10 * * * * *', () => {
+    // cron.schedule('* * 9,12,15,18 * * *', () => {
+    cron.schedule('*/10 * * * * *', () => {
         // Check is first time send job message
         if (initJobMessageDisplayed == false) {
             sendMessage(getInitJobsStr(todayJobs));
