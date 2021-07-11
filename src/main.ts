@@ -1,12 +1,10 @@
-import * as dotenv from "dotenv";
+require("dotenv").config();
 import * as cron from "node-cron";
 import * as fs from "fs";
 import { Telegraf } from "telegraf";
 import { Timetable, JobInfo } from "./entity/timetable";
 import { RandomHelper } from "./utils/randomHelper";
 import { HistoryRepository } from "./respository/history";
-
-dotenv.config();
 
 const client = new Telegraf(process.env.TELEGRAM_BOT_TOKEN)
 const chatId: string = process.env.TELEGRAM_CHAT_ID;
@@ -26,13 +24,20 @@ async function main() {
             returnMsg = "⚠️在使用 /done 命令之前请设置 username!";
         } else {
             var jobInfo = todayJobs.find(jobInfo => jobInfo.username == username);
-            if (historyRepository.addHistory(jobInfo.person, jobInfo.job)) {
-                returnMsg = `@${username} 💗 谢谢你对这个家的付出！`
+
+            var todayDoneJob: Set<string> = historyRepository.getTodayHistory();
+
+            if (todayDoneJob.has(jobInfo.person)) {
+                returnMsg = `@${username} 你已经完成了今天的家务！`
             } else {
-                returnMsg = "⚠️/done 命令出错！";
+                if (historyRepository.addHistory(jobInfo.person, jobInfo.job)) {
+                    returnMsg = `@${username} 💗 谢谢你对这个家的付出！`
+                } else {
+                    returnMsg = "⚠️/done 命令出错！";
+                }
             }
         }
-        client.telegram.sendMessage(chatId, returnMsg);
+        sendMessage(returnMsg);
     });
     client.launch();
 
