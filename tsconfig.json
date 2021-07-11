@@ -2,8 +2,14 @@
     "compilerOptions": {
         "target": "es6",
         "module": "commonjs",
-        "outDir": "out",
+        "outDir": "build",
         "sourceMap": true,
-        "resolveJsonModule": true,
+        "declaration": true,
+        "baseUrl": ".",
+        "paths": {
+            "*": [
+                "node_modules/*"
+            ]
+        }
     }
 }

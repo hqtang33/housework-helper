@@ -116,7 +116,7 @@ function getNotifyJobsStr(jobInfos: Array<JobInfo>): string {
 }
 
 function getTimeTable(): Timetable {
-    const timetableRaw = fs.readFileSync('./src/timetable.json',
+    const timetableRaw = fs.readFileSync('./timetable.json',
         { encoding: 'utf8', flag: 'r' });
     let timetable: Timetable = JSON.parse(timetableRaw);
     return timetable;
