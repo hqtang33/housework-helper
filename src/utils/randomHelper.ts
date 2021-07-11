@@ -1,0 +1,5 @@
+export class RandomHelper {
+    static getRandomNumber(max: number): number {
+        return Math.floor(Math.random() * max);
+    }
+}
