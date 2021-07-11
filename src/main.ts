@@ -40,8 +40,8 @@ async function main() {
     todayJobs = getRandomJobs();
 
     // Notify if job havent done
-    // cron.schedule('* * 9,12,15,18 * * *', () => {
-    cron.schedule('*/10 * * * * *', () => {
+    cron.schedule('0 0 9,12,15,18 * * *', () => {
+        // cron.schedule('*/10 * * * * *', () => {
         // Check is first time send job message
         if (initJobMessageDisplayed == false) {
             sendMessage(getInitJobsStr(todayJobs));
