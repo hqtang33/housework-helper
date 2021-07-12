@@ -39,6 +39,12 @@ async function main() {
         }
         sendMessage(returnMsg);
     });
+
+    client.command("/today", context => {
+        var returnMsg: string = getNotifyJobsStr(todayJobs);
+        sendMessage(returnMsg);
+    });
+
     client.launch();
 
     // Init Job
