@@ -103,7 +103,8 @@ function filterRemainingJobs(jobs: Array<JobInfo>): Array<JobInfo> {
 
 function getRandomJobs(): Array<JobInfo> {
     const timetable = getTimeTable();
-    const jobIndex = RandomHelper.getRandomNumber(timetable.data.length);
+    // const jobIndex = RandomHelper.getRandomNumber(timetable.data.length);
+    const jobIndex = new Date().getDay();
     const jobs = timetable.data[jobIndex].jobs;
 
     return jobs;

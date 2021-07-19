@@ -5,22 +5,22 @@
 				{
 					"username": "chtang5257",
 					"person": "Jing Yi",
-					"job": "扫地"
+					"job": "晒衣+收拾家"
 				},
 				{
 					"username": "HuiyiTang",
 					"person": "Hui Yi",
-					"job": "抹地"
+					"job": "抹地+收拾饭桌"
 				},
 				{
 					"username": "yixuant99",
 					"person": "Yi Xuan",
-					"job": "煮饭"
+					"job": "洗衣+晒衣+收衣"
 				},
 				{
 					"username": "hqtang33",
 					"person": "Hao Quan",
-					"job": "晒衣/收衣"
+					"job": "扫地+洗厕所"
 				}
 			]
 		},
@@ -29,22 +29,22 @@
 				{
 					"username": "chtang5257",
 					"person": "Jing Yi",
-					"job": "晒衣/收衣"
+					"job": "扫地+晒衣"
 				},
 				{
 					"username": "HuiyiTang",
 					"person": "Hui Yi",
-					"job": "煮饭"
+					"job": "晒衣+收衣"
 				},
 				{
 					"username": "yixuant99",
 					"person": "Yi Xuan",
-					"job": "抹地"
+					"job": "洗衣+收衣"
 				},
 				{
 					"username": "hqtang33",
 					"person": "Hao Quan",
-					"job": "扫地"
+					"job": "收拾饭桌"
 				}
 			]
 		},
@@ -53,22 +53,22 @@
 				{
 					"username": "chtang5257",
 					"person": "Jing Yi",
+					"job": "洗厕所"
+				},
+				{
+					"username": "HuiyiTang",
+					"person": "Hui Yi",
 					"job": "收拾家里"
 				},
 				{
-					"username": "HuiyiTang",
-					"person": "Hui Yi",
-					"job": "扫地"
-				},
-				{
 					"username": "yixuant99",
 					"person": "Yi Xuan",
-					"job": "煮饭"
+					"job": "洗衣+收衣"
 				},
 				{
 					"username": "hqtang33",
 					"person": "Hao Quan",
-					"job": "晒衣/收衣"
+					"job": "扫地+收衣"
 				}
 			]
 		},
@@ -93,6 +93,78 @@
 					"username": "hqtang33",
 					"person": "Hao Quan",
 					"job": "扫地/煮饭"
+				}
+			]
+		}
+		{
+			"jobs": [
+				{
+					"username": "chtang5257",
+					"person": "Jing Yi",
+					"job": "晒衣+收拾家"
+				},
+				{
+					"username": "HuiyiTang",
+					"person": "Hui Yi",
+					"job": "抹地+收拾饭桌"
+				},
+				{
+					"username": "yixuant99",
+					"person": "Yi Xuan",
+					"job": "洗衣+晒衣+收衣"
+				},
+				{
+					"username": "hqtang33",
+					"person": "Hao Quan",
+					"job": "扫地+洗厕所"
+				}
+			]
+		},
+		{
+			"jobs": [
+				{
+					"username": "chtang5257",
+					"person": "Jing Yi",
+					"job": "扫地+晒衣"
+				},
+				{
+					"username": "HuiyiTang",
+					"person": "Hui Yi",
+					"job": "晒衣+收衣"
+				},
+				{
+					"username": "yixuant99",
+					"person": "Yi Xuan",
+					"job": "洗衣+收衣"
+				},
+				{
+					"username": "hqtang33",
+					"person": "Hao Quan",
+					"job": "收拾饭桌"
+				}
+			]
+		},
+		{
+			"jobs": [
+				{
+					"username": "chtang5257",
+					"person": "Jing Yi",
+					"job": "洗厕所"
+				},
+				{
+					"username": "HuiyiTang",
+					"person": "Hui Yi",
+					"job": "收拾家里"
+				},
+				{
+					"username": "yixuant99",
+					"person": "Yi Xuan",
+					"job": "洗衣+收衣"
+				},
+				{
+					"username": "hqtang33",
+					"person": "Hao Quan",
+					"job": "扫地+收衣"
 				}
 			]
 		}
